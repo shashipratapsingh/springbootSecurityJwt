@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "23518386-1e56-447c-b634-e58d09c2381e",
+		"name": "ecomerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31915291"
+	},
+	"item": [
+		{
+			"name": "Role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roleName\":\"user\",\r\n    \"roleDesription\":\"Defualt role for user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/createNewRole",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"createNewRole"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerNewUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"shashi@1234\",\r\n    \"userFirstName\":\"Shahsi Pratap \",\r\n    \"userLastName\":\"pratap singh\",\r\n    \"userpassword\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/registernewuser",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"registernewuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "foradmin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjEyMyIsImV4cCI6MTcxNzcwODcyNiwiaWF0IjoxNzE3NjkwNzI2fQ.ZvXHmQsP-vpy403py6S1YzQ5UufxTK505m7YGh5bK7uhHDF9Me0eDPoHLBZU3DsByMqDIe_jJVjwd4tewPHl0Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/forAdmin",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"forAdmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "foruser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaGFzaGkxMjMiLCJleHAiOjE3MTc3MDQ1MDgsImlhdCI6MTcxNzY4NjUwOH0.EuMA7SFSdfyTmTU56GAs_l0arXaXF6e3GMZ8A1n0XhOMpVbI_QZYgUDX75CZi7X58PRRBlXKg_m7B_8v6na_jA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/forUser",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"forUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generateTokenUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"shashi123\",\r\n    \"userPassword\":\"shashi@password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/autheticate",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"autheticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generateTokenAdmin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjEyMyIsImV4cCI6MTcxNzcwNDY5NiwiaWF0IjoxNzE3Njg2Njk2fQ.FW_HibJOUeKln56QgtHDaG3RndJEIqSjjh7JtG3uXSJgBQcg-SmlRlQfZ7ji8zrJlVPC1lWX0Srvb6GC6utzRA",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"admin123\",\r\n    \"userPassword\":\"admin@password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/autheticate",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"autheticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
